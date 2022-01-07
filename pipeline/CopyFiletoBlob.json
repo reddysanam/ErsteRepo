@@ -16,19 +16,52 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
 					"enableStaging": false
-				}
+				},
+				"inputs": [
+					{
+						"referenceName": "Test_Delimited",
+						"type": "DatasetReference",
+						"parameters": {
+							"FileSystem": {
+								"value": "@pipeline().parameters.FileSystem",
+								"type": "Expression"
+							},
+							"Dir": {
+								"value": "@pipeline().parameters.Dir",
+								"type": "Expression"
+							},
+							"FileName": {
+								"value": "@pipeline().parameters.FileName",
+								"type": "Expression"
+							}
+						}
+					}
+				]
 			}
 		],
 		"parameters": {
 			"FileSystem": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "raw"
 			},
 			"Dir": {
 				"type": "string"
 			},
 			"FileName": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "TestFile.txt"
 			}
 		},
 		"annotations": []
