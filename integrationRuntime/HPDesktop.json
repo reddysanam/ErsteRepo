@@ -1,0 +1,6 @@
+{
+	"name": "HPDesktop",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
