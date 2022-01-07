@@ -7,13 +7,16 @@
 		},
 		"parameters": {
 			"FileSystem": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "raw"
 			},
 			"Dir": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "Test"
 			},
 			"FileName": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "TestFile.txt.txt"
 			}
 		},
 		"annotations": [],
