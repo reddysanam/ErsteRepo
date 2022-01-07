@@ -1,0 +1,9 @@
+{
+	"name": "Erste-DF",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "4fe4b52f-57a0-4c5a-88d8-3959d00d628d",
+		"tenantId": "b5956ce1-6e21-4d41-8742-6cde83523402"
+	}
+}
